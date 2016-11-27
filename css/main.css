@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* ======================= SITE STRUCTURE ========================= */
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	background-color: black;
+	margin: 0 auto;
+	width: 70%;
+}
+
+
+.row:after {
+	clear:both;
+	content:"";
+	display:table;
+	
+}
+
+/* ========================== MEDIA ============================== */
+img {
+	max-width: 100%   							/* CSS you need for the image inside the figure  */
+}	
+
+/* ========================== COLUMNS ============================ */
+
+[class*='col-'] {     							/* attritube selector  */
+	float: left;
+	padding-right: 20px;   						/* YOOU don't want it to change size -- so use px here  */
+	margin-bottom: 20px;
+}
+
+[class*='col-']:last-of-type { 
+	padding-right: 0;
+}
+
+
+/*
+[class*='col-'] {    
+	float: left;
+	padding: 0 20px;   
+}
+[class*='col-']:first-of-type { 
+	padding-left: 0;
+}*/
+
+.red {
+	background-color: red;
+	height: 50px;     /* percentages are relative to the parent element, so you don't need to specify 50%, or it would be 25%. The grid determines the percentages, but you have to guestimate these. */
+}
+
+/* Full Amounts */
+
+.col-1-1{
+	width:100%;
+}
+
+.col-1-2 {
+	width: 50%;	
+}
+
+.col-1-3 {
+	width: 33.33%;
+}
+
+.col-1-4 {
+	width: 25%;
+}
+
+.col-1-5 {
+	width: 20%;
+}
+
+.col-1-6 {
+	width: 16.66%;
+}
+
+.col-1-7 {
+	width: 14.285%;
+}
+
+.col-1-8 {
+	width: 12.5%;
+}
+
+.col-1-9 {
+	width: 11.11%;
+}
+
+.col-1-10 {
+	width: 10%;
+}
+
+.col-1-11 {
+	width: 9.09%;
+}
+
+.col-1-12 {
+	width:8.33%;
+}
+
+/* Fraction Amounts */
+
+.col-2-3 { 
+	width: 66.66%;
+}
+
+.col-3-4 {
+	width:75%;
+}
+  
+.col-2-5 {
+	width: 40% ;
+}
+
+.col-3-5 {
+	width: 60%;
+}
+ 
+ .col-5-6 {
+	width: 83.33%;
+}
+ 
+ .col-2-7 {
+	width: 28.57%;
+}
+   
+  .col-5-7 {
+	width: 71.43% ;
+}
+  
+  .col-3-8 {
+	width: 37.5%;
+} 
+ 
+ .col-5-8 {
+	width: 62.5%;
+}  
+  
+  .col-5-9 {
+	width: 55.55%;
+} 
+
+  .col-4-9 {
+	width: 44.44%;
+} 
+ 
+  .col-9-10 {
+	width: 90%;
+} 
+  
+  .col-4-11 {
+	width: 36.36%;
+} 	
+
+  .col-7-11 {
+	width: 63.63%;
+} 	
+
+  .col-5-12 {
+	width: 41.66%;
+} 	
+
+  .col-7-12 {
+	width: 58.33%;
+} 	
+	
+	
+
+/* === IMPORTANT NOTE=== if you want to apply a background color to a column, you will need to create a div/conatiner inside the column and apply the background color to that container (that child element).  Otherwise you will never see that gap or gutter between the columns.  We always want to be able to see the gap between the columns)    */
+
+/* you can say padding (not padding-right): 0 20px: on the class*='col-'},  Then you have to keep last of type padding-right zero and say paddign-left on first of type    */
+
+
+
+/* ===MEDIA QUERY=== */   
+
+
+
+/* Fix the amounts to not leave any gap.  Still have to cover 100%.  Change amounts to not have more than five or six boxes. Make all of them look equally distibuted at a large display and both a small display. */
+
+@media (max-width: 480px) {
+	
+	
+/* ======================= SITE STRUCTURE ========================= */	
+	.wrapper {
+		width: 85%;
+	}
+	
+	
+/* ========================= COLUMNS ============================== */
+/* % must divide into an equal break.  keep percentages at least 20%, if it keeps the same percentage, you don't need to rewrite it */ 
+	
+	.col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8), col-1-6-sm {
+		padding-right: 0;    
+	}
+	
+/* Full Amounts */
+	
+	.col-1-4.col-sm, .col-1-8, .col-1-12  {
+		width: 25%;
+	}
+	
+	.col-1-5, .col-1-10  {
+		width: 20%;
+	}
+	
+	.col-1-6.col-sm {
+		width: 90%;
+	}
+	
+	.col-1-6, .col-1-9, .col-1-3.col-sm  {
+		width: 33.33%;
+	}
+	
+	.col-5-6, .col-2-3 {
+		width: 66.66%;
+	}
+	
+	.col-1-7, .col-1-11 {
+		width: 100%;
+	}
+
+	.col-9-10 {
+		width: 80%;
+	}
+								/* use class selector to target repeated fraction.  */
+/* Fraction Amounts */
+	
+
+.col-3-4 {
+	width:75%;
+}
+  
+.col-2-5, .col-1-10.col-sm {
+	width: 40% ;
+}
+
+.col-3-5, .col-9-10 {
+	width: 60%;
+}
+ 
+.col-1-6.col-sm, .col-5-6 {
+	width: 50%;
+}
+ 
+ .col-2-7 {
+	width: 28.57%;
+}
+   
+  .col-5-7 {
+	width: 71.43% ;
+}
+  
+  .col-3-8 {
+	width: 37.5%;
+} 
+ 
+ .col-5-8 {
+	width: 62.5%;
+}  
+  
+  .col-5-9 {
+	width: 55.55%;
+} 
+
+  .col-4-9 {
+	width: 44.44%;
+} 
+  
+  .col-4-11 {
+	width: 36.36%;
+} 	
+
+  .col-7-11 {
+	width: 63.63%;
+} 	
+
+  .col-5-12 {
+	width: 41.66%;
+} 	
+
+  .col-7-12 {
+	width: 58.33%;
+} 	
+				
+
+}
+
+	
+@media (max-width: 420px) {
+	.wrapper {
+		width: 95%;
+	}
+}
+	
+	/* break points for smaller display sizes */
