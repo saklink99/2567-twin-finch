@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800,900" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<title>Home</title>
+<title>Twin Finch Roastery</title>
 </head>
 
 <body>
@@ -18,8 +18,8 @@
     	<div> <!--Background color or can I put it on the header (behind the picture????)-->	
             <nav class="wrapper">
                 <div class="row">
-                    <h1 class="f-left"><a> <img src="img/logo.png" alt="Twin Finch Roastery" width="100"></a></h1>
-                    <div class="f-left">
+                    <div class="col-1-6"><a><img src="img/logo.png" alt="Twin Finch Roastery" width="100"></a></div>
+                    <div class="col-1-3">  <!--should this be the nav instead of the div two layers up?-->
                         <ul>
                             <li><a href="#Featured">Featured</a></li>
                             <li><a href="#Roasts">Roasts</a></li>
@@ -32,71 +32,84 @@
         </div>
         <div id="hero"> <!--image-->
         	<div class="wrapper center">
-            	<p>Twin Finch Roastery is an authentic micro-roastery, small, dedicated, and highly focused on quality.</p> 
+            	<div class="row">
+                	<div class="col-8-12">
+            			<h1>Twin Finch Roastery is an authentic micro-roastery, small, dedicated, and highly focused on quality.</h1> 
+                    </div>
+                </div>
             </div>
         </div>
     </header> 
 
-    <section id="featured">
-    	<div class="wrapper">
-            <header>
-                <h2>Featured Roasts</h2>
+    <section id="featured" class="wrapper">
+        <header class="row">
+            <div class="col-8-12">
+                <h2>Featured Roasts</h2>  <!--put h2 as inline block and put border and padding directly on h2-->
                 <p>We have a constantly evolving, hand-picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home</p>
-            </header>
-            <div class="row">                
-            	<div class="f-left">
-               		<img src="img/search.png" alt="" width="15">
-                    <header>
-                    	<h3>Finch House Blend</h3>
-                        <div></div>
-                        <p>Medium</p>
-                    </header>
-                    <p>description</p>
-                    <p>location</p>
-                    <p>price</p>
-                    <a href="#" class="btn">Buy</a>
+            </div>
+        </header>
+        <div class="row">                
+            <div class="col-1-2">
+                <div>
+                    <img src="img/search.png" alt="" width="15">  <!--put a border on this div-->
                 </div>
-                <div div class="f-right">
-               		<img src="img/search.png" alt="" width="15">
-                    <header>
-                    	<h3>Evening Oak</h3>
-                        <div></div>
-                        <p>Medium-Dark</p>
-                    </header>
-                    <p>description</p>
-                    <p>location</p>
-                    <p>price</p>
-                    <a href="#" class="btn">Buy</a>
+                <header>
+                    <h3>Finch House Blend</h3>
+                    <div></div>
+                    <p>Medium</p>
+                </header>
+                <p>description</p>
+                <p>location</p>
+                <p>price</p>
+                <a href="#" class="btn">Buy</a>
+            </div>
+            <div div class="col-1-2">
+                <div>
+                    <img src="img/search.png" alt="" width="15">   <!--no border on this div-->
                 </div>
-        	</div>
+                <header>
+                    <h3>Evening Oak</h3>
+                    <div></div>
+                    <p>Medium-Dark</p>
+                </header>
+                <p>description</p>
+                <p>location</p>
+                <p>price</p>
+                <a href="#" class="btn">Buy</a>
+            </div>
         </div>    
     </section>
-    <div>
+    <blockquote>
     	<p>Call out quote with link</p>	
-    </div>
-    <section>
-   		<div class="wrapper">
-            <header>
+        <footer><a href="coffeereview.com">-Coffee Review</a></footer>
+    </blockquote>
+    <section class="wrapper">
+        <header class="row">
+        	<div class="col-8-12">
                 <h2>Roasts</h2>
                 <p>Lead In Text</p>
-            </header>
-            <div class="row">                
-            	<div class="f-left center">
-               		<img src="img/sunrise.png" alt="" width="15">
-                    <header>
-                    	<h3>Sunrise</h3>
-                        <div></div>
-                        <p>Light</p>
-                    </header>
-                    <p>description</p>
-                    <p>location</p>
-                    <p>price</p>
-                    <a href="#" class="btn">Buy</a>
+            </div>
+        </header>
+        <div class="row">                
+            <div class="col-1-3 center">
+                <img src="img/sunrise.png" alt="" width="15">
+                <div>
+                <header>
+                    <h3>Sunrise</h3>
+                    <div></div>
+                    <p>Light</p>
+                </header>
+                <p>description</p>
+                <p>location</p>
+                <p>price</p>
+                <a href="#" class="btn">Buy</a>
                 </div>
-                <div div class="f-left center">
-               		<img src="img/midnight.png" alt="" width="15">
+            </div>
+            <div div class="col-1-3 center">
+                <img src="img/midnight.png" alt="" width="15">
+                <div>
                     <header>
-                    	<h3>Midnight</h3>
+                        <h3>Midnight</h3>
                         <div></div>
                         <p>Dark</p>
                     </header>
@@ -105,37 +118,57 @@
                     <p>price</p>
                     <a href="#" class="btn">Buy</a>
                 </div>
-                      <div div class="f-right center">
-               		<img src="img/esresso.png" alt="" width="15">
+            </div>
+            <div div class="col-1-3 center">
+                <img src="img/esresso.png" alt="" width="15">
+                <div>
                     <header>
-                    	<h3>Espresso</h3>
+                        <h3>Espresso</h3>
                         <div></div>
                     </header>
                     <p>description</p>
                     <p>location</p>
                     <p>price</p>
                     <a href="#" class="btn">Buy</a>
-                </div>  
-        	</div>
-        </div>   
+                </div>
+            </div>  
+       	</div>  
     </section>
     <section>
     	<div class="wrapper">
-        	<header>
-            	<h2>Why Our Beans Are Better</h2>
-                <p>Text</p>
-                <div></div>
-                <p>Text with Link</p>
-            </header>
+            <div class="row">
+            	<div class="col-8-12">
+                    <header>
+                        <h2>Why Our Beans Are Better</h2>
+                        <p>Text</p>
+                     </header>   
+                     <div></div>
+                     <p>Text with Link</p>
+                 </div>
+            </div>     
         </div>
     </section>
-    <section id="Contact">
-    	<header>
-        	<h2>Ask Us</h2>
-            <p>lead in text</p>
+    <section>
+    	<div class="wrapper">
+            <form>
+                <header>
+                    <h2>Join Our Newsletter</h2>
+                </header>	
+                <label for="newsemail">Email</label>
+                <input type="text" id="newsemail">
+                <a href="#" class="btn">Sign Up Now</a>
+            </form>
+        </div>
+    </section>
+    <section id="Contact" class="wrapper">
+    	<header class="row">
+        	<div class="col-8-12">
+                <h2>Ask Us</h2>
+                <p>lead in text</p>
+            </div>
         </header>
         <div class="row">                
-            <div class="f-left center">
+            <div class="col-1-2 center">
             	<p></p>
                 <p></p>
                 <p></p>
@@ -145,11 +178,13 @@
                     <li><a href="http://www.google.com" target="_blank" class="sprite" id="google"></a></li>
                 </ul>
             </div>
-            <form class="f-right">
-                <input type="text" name="name" placeholder="Enter Your Name" id="Name">
-  				<input type="text" name="email" placeholder="Email" id="email">
-  				<input type="text" name="comments" placeholder="Comments" id="comments">  <!--this is different-->
-                <a href="#" class="btn">Submit</a> 
+            <form class="col-1-2">
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Enter Your Name" id="name">
+  				<label for="email">Email</label>
+                <input type="text" name="email" placeholder="Email" id="email">
+  				<textarea name="comments" placeholder="Comments" id="comments" cols="25" rows="3"></textarea>  <!--this is different-->
+	           	<a href="#" class="btn">Submit</a> 
 			</form>
         </div>        
     </section>
@@ -159,11 +194,11 @@
                 <h2>Location</h2>
             </header>
             <div class="row">
-                <div class="f-left">
+                <div class="col-1-3">
                 	<p></p>
                     <p></p>
                 </div>
-                <div class="f-right">
+                <div class="col-1-2">
                 	<!--map-->
                 </div>
         	</div>
@@ -172,21 +207,21 @@
     <footer>
     	<div class="wrapper">
             <div class="row">
-                <div class="f-left">
+                <div class="col-1-6">
                     <a><img src="img/logo.png" alt="Twin Finch Roastery" width="100"></a>
                  </div> 
-                <div class="f-left">
+                <div class="col-1-6">
                     <h4>Location</h4>
                     <address>Text<br>text</address>
                 </div>  
-                <div class="f-left">
+                <nav class="col-1-3">
                     <ul>
                         <li><a href="#Featured">Featured</a></li>
                         <li><a href="#Roasts">Roasts</a></li>
                         <li><a href="#Contact">Contact</a></li>
                         <li><a href="#Location">Location</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
     	</div>
     </footer>
