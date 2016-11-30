@@ -1,8 +1,101 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+	1.1 - Headings
+	1.2 - Body Copy
+	1.3 - Buttons
+	1.4 - Forms
+	1.5 - Lists
+	1.6 - Tables
+2.0 - Navigation Menus
+	3.1 - Main Menuf
+	3.2 - Sub Menu
+	3.3 - Footer Menu
+3.0 - Content
+	3.1 - Site Structure
+	3.2 - Section Name
+	3.3 - Section Name
+4.0 - Media
+5.0 - Utility
+	5.1 - Background Colors
+	5.2 - Text Colors
+	5.3 - Text Sizes
+	5.4 - Alignments
+--------------------------------------------------------------*/
 
-/* ======================= SITE STRUCTURE ========================= */
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */
+/*--------------------------------------------------------------
+1.1 - BODY
+-------------------------------------------------------------- */
+/*--------------------------------------------------------------
+1.2 - HEADINGS
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+1.4 - FORMS
+-------------------------------------------------------------- */
+
+
+form input {
+	margin-top: 20px;
+}
+
+textarea, form.col-1-2 input, form.col-1-2 a {
+	display: block;
+}
+
+form a {
+	text-align: left;
+}
+
+label {
+	display:none;
+}
+
+/*--------------------------------------------------------------
+1.5 - LISTS
+-------------------------------------------------------------- */
+li {
+	display: inline-block;
+	list-style: none;
+    font-weight: 700;
+}
+
+nav li {
+	padding: 0 5px;
+}
+
+ul {
+	padding-left: 0;
+}
+
+
+/*--------------------------------------------------------------
+2.0 - MAIN MENU
+-------------------------------------------------------------- */
+nav a, a {
+	text-decoration: none;
+	padding-top:10px;
+	color: #000000;
+}
+
+header .col-2-3 {
+	margin-top: 40px;
+}
+
+/*--------------------------------------------------------------
+3.0 - SITE STRUCTURE
+-------------------------------------------------------------- */
+
+
+
+
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -22,19 +115,74 @@
 	clear:both;
 	content:"";
 	display:table;
-	
 }
 
-/* ========================== MEDIA ============================== */
+
+body {
+	text-align: center;
+}
+
+
+.col-3-4 p{
+	display: inline-block;
+}
+
+
+
+
+/*--------------------------------------------------------------
+3.3 - SECTIONS
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+4.0 - MEDIA
+-------------------------------------------------------------- */
+
+
 img {
-	max-width: 100%   							/* CSS you need for the image inside the figure  */
+	max-width: 100%   							
 }	
 
-/* ========================== COLUMNS ============================ */
+#map {
+	height: 200px;
+}
+
+
+/*--------------------------------------------------------------
+5.0 - UTILITY
+-------------------------------------------------------------- */
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.center-block {
+	margin: 0 auto;
+	float: none !important;
+}
+
+
+/*--------------------------------------------------------------
+5.1 - BG COLORS
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+5.2 - TXT UTILITY
+-------------------------------------------------------------- */
+/*--------------------------------------------------------------
+5.3 - SPACING
+-------------------------------------------------------------- */
+/*--------------------------------------------------------------
+5.4 - ALIGNMENTS
+-------------------------------------------------------------- */
 
 [class*='col-'] {     							/* attritube selector  */
 	float: left;
-	padding-right: 20px;   						/* YOOU don't want it to change size -- so use px here  */
+	padding-right: 20px;   						/* YOU don't want it to change size -- so use px here  */
 	margin-bottom: 20px;
 }
 
@@ -43,24 +191,16 @@ img {
 }
 
 
-/*
-[class*='col-'] {    
-	float: left;
-	padding: 0 20px;   
-}
-[class*='col-']:first-of-type { 
-	padding-left: 0;
-}*/
+/*--------------------------------------------------------------
+6.1 - SINGLE COLUMNS
+-------------------------------------------------------------- */
+/* ========================== COLUMNS ============================ */
 
-.red {
-	background-color: red;
-	height: 50px;     /* percentages are relative to the parent element, so you don't need to specify 50%, or it would be 25%. The grid determines the percentages, but you have to guestimate these. */
-}
 
-/* Full Amounts */
 
-.col-1-1{
-	width:100%;
+
+.col-1-1, .col-1-3 .col-1-3, .col-1-3 .col-2-3 {
+	width: 100%;
 }
 
 .col-1-2 {
@@ -107,7 +247,9 @@ img {
 	width:8.33%;
 }
 
-/* Fraction Amounts */
+/*--------------------------------------------------------------
+6.2 - PARTIAL COLUMNS
+-------------------------------------------------------------- */
 
 .col-2-3 { 
 	width: 66.66%;
@@ -172,38 +314,104 @@ img {
   .col-7-12 {
 	width: 58.33%;
 } 	
+
+   .col-8-12 {
+ 	width: 80%;
+ }
 	
 	
 
-/* === IMPORTANT NOTE=== if you want to apply a background color to a column, you will need to create a div/conatiner inside the column and apply the background color to that container (that child element).  Otherwise you will never see that gap or gutter between the columns.  We always want to be able to see the gap between the columns)    */
-
-/* you can say padding (not padding-right): 0 20px: on the class*='col-'},  Then you have to keep last of type padding-right zero and say paddign-left on first of type    */
 
 
+/*+++++++++++++++++++++++++++++++++++++++MEDIA QUERY+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-/* ===MEDIA QUERY=== */   
-
-
-
-/* Fix the amounts to not leave any gap.  Still have to cover 100%.  Change amounts to not have more than five or six boxes. Make all of them look equally distibuted at a large display and both a small display. */
 
 @media (max-width: 480px) {
 	
-	
-/* ======================= SITE STRUCTURE ========================= */	
-	.wrapper {
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */		
+/*--------------------------------------------------------------
+1.1 - BODY
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+1.2 - HEADINGS
+-------------------------------------------------------------- */
+/*--------------------------------------------------------------
+1.4 - FORMS
+-------------------------------------------------------------- */	
+/*--------------------------------------------------------------
+1.5 - LISTS
+-------------------------------------------------------------- */
+/*--------------------------------------------------------------
+2.0 - MAIN MENU
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+3.0 - SITE STRUCTURE
+-------------------------------------------------------------- */
+
+.wrapper {
 		width: 85%;
 	}
 	
 	
-/* ========================= COLUMNS ============================== */
-/* % must divide into an equal break.  keep percentages at least 20%, if it keeps the same percentage, you don't need to rewrite it */ 
+	.col-3-4 p {
+		display: block;
+	}
 	
-	.col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8), col-1-6-sm {
+	
+	nav .col-2-3 {
+		margin-top: 0;
+	}
+/*--------------------------------------------------------------
+3.3 - SECTIONS
+-------------------------------------------------------------- */
+/*-- Services -- */
+
+/*--------------------------------------------------------------
+4.0 - MEDIA
+-------------------------------------------------------------- */
+
+
+/*--------------------------------------------------------------
+5.0 - UTILITY
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+5.1 - BG COLORS
+-------------------------------------------------------------- */	
+	
+/*--------------------------------------------------------------
+5.2 - TXT UTILITY
+-------------------------------------------------------------- */	
+
+
+/*--------------------------------------------------------------
+5.3 - SPACING
+--------------------------------------------------------------  Double check to make sure these are working   */	
+
+
+/*--------------------------------------------------------------
+5.4 - ALIGNMENTS
+-------------------------------------------------------------- */
+
+	
+	
+/* ========================= COLUMNS ============================== */
+
+
+
+	
+	.col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8), col-1-6-sm, .col-8-12, .col-1-6 {
 		padding-right: 0;    
 	}
 	
-/* Full Amounts */
+/*--------------------------------------------------------------
+6.1 - SINGLE COLUMNS
+-------------------------------------------------------------- */
+
 	
 	.col-1-4.col-sm, .col-1-8, .col-1-12  {
 		width: 25%;
@@ -217,27 +425,30 @@ img {
 		width: 90%;
 	}
 	
-	.col-1-6, .col-1-9, .col-1-3.col-sm  {
-		width: 33.33%;
+	.col-1-6.col-sm, .col-5-6 {
+	width: 50%;
 	}
-	
-	.col-5-6, .col-2-3 {
+
+	.col-5-6, .col-2-3, .col-1-3 .col-2-3 {
 		width: 66.66%;
 	}
 	
-	.col-1-7, .col-1-11 {
+	.col-1-7, .col-1-11, .col-1-3, .col-8-12, .col-1-4, .col-2-3, .col-1-2, .col-1-6 {
 		width: 100%;
 	}
 
 	.col-9-10 {
 		width: 80%;
 	}
-								/* use class selector to target repeated fraction.  */
-/* Fraction Amounts */
 	
+	 .col-1-9, .col-1-3 .col-1-3  {
+		width: 33.33%;
+	}
+	
+							
 
 .col-3-4 {
-	width:75%;
+	width:100%;
 }
   
 .col-2-5, .col-1-10.col-sm {
@@ -248,10 +459,7 @@ img {
 	width: 60%;
 }
  
-.col-1-6.col-sm, .col-5-6 {
-	width: 50%;
-}
- 
+
  .col-2-7 {
 	width: 28.57%;
 }
@@ -291,15 +499,11 @@ img {
   .col-7-12 {
 	width: 58.33%;
 } 	
-				
+	
 
+	
 }
 
 	
-@media (max-width: 420px) {
-	.wrapper {
-		width: 95%;
-	}
-}
 	
-	/* break points for smaller display sizes */
+	
