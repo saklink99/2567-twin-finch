@@ -11,29 +11,17 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+ 
 
 <title>Twin Finch Roastery</title>
 </head>
 
 <body>
 	<header>  
-    	<div> <!--Background color or can I put it on the header (behind the picture????)-->	
+    	<div> <!--background image-->	
             <nav class="wrapper">
                 <div class="row">
-                    <div class="col-1-6"><a><img src="img/logo-test.png" alt="Twin Finch Roastery" width="100"></a></div>
+                    <div class="col-1-6"><a href="#"><img src="img/logo.png" alt="Twin Finch Roastery" width="100"></a></div>
                     <div class="col-2-3">  <!--should this be the nav instead of the div two layers up?-->
                         <ul>
                             <li><a href="#featured">Featured</a></li>
@@ -46,7 +34,7 @@
             </nav> 
         </div>
         <div id="hero"> <!--image-->
-        	<div class="wrapper center">
+        	<div class="wrapper">
             	<div class="row">
                 	<div class="col-8-12 center-block">
             			<h1>Twin Finch Roastery is an authentic micro-roastery, small, dedicated, and highly focused on quality.</h1> 
@@ -66,7 +54,7 @@
         <div class="row">                
             <section class="col-1-2">
                 <div>
-                    <img src="img/roast-test.jpg" alt="" width="300">  <!--put a border on this div-->
+                    <img src="img/roast-house.jpg" alt="Finch House Blend" width="300">  <!--put a border on this div-->
                 </div>
                 <header>
                     <h3>Finch House Blend</h3>
@@ -76,11 +64,11 @@
                 <p>This signature blend features a hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
                 <p>Cajamarca &amp; Moyobamba Regions, Peru</p>
                 <p>1lb $17.95</p>
-                <a href="#" class="btn">Buy</a>
+                <p><a href="#" class="btn">Buy</a></p>
             </section>
             <section class="col-1-2">
                 <div>
-                    <img src="img/roast-test.jpg" alt="" width="300">   <!--no border on this div-->
+                    <img src="img/roast-seasonal.jpg" alt="Evening Oak" width="300">   <!--no border on this div-->
                 </div>
                 <header>
                     <h3>Evening Oak</h3>
@@ -90,14 +78,18 @@
                 <p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
                 <p>Eastern Java, Indonesia</p>
                 <p>1lb $19.95</p>
-                <a href="#" class="btn">Buy</a>
+                <p><a href="#" class="btn">Buy</a></p>
             </section>
         </div>    
     </section>
-    <blockquote>
-    	<p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”</p>	
-        <footer><a href="http://www.coffeereview.com" target="_blank">-Coffee Review</a></footer>
-    </blockquote>
+    <div class="wrapper">
+        <div class="col-8-12 center-block">
+            <blockquote>
+                <p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”</p>	
+                <footer><a href="http://www.coffeereview.com" target="_blank">-Coffee Review</a></footer>
+            </blockquote>
+        </div>        
+    </div>
     <section class="wrapper" id="roasts">
         <header class="row">
         	<div class="col-8-12 center-block">
@@ -109,7 +101,7 @@
             <section class="col-1-3">
             	<div class="row">
                 	<div class="col-1-3">    
-                        <img src="img/roast-test.jpg" alt="" width="120">
+                        <img src="img/roast-sunrise.jpg" alt="Sunrise" width="120">
                     </div>
                     <div class="col-2-3">
                         <header>
@@ -120,14 +112,14 @@
                         <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
                         <p>La Chiapas, Mexico</p>
                         <p>1lb $17.95</p>
-                        <a href="#" class="btn">Buy</a>
+                        <p><a href="#" class="btn">Buy</a></p>
                     </div>    
                 </div>
             </section>
             <section class="col-1-3">
             	<div class="row">
                     <div class="col-1-3">
-                        <img src="img/roast-test.jpg" alt="" width="120">
+                        <img src="img/roast-midnight.jpg" alt="Midnight" width="120">
                     </div>
                     <div class="col-2-3">
                         <header>
@@ -138,14 +130,14 @@
                         <p>Roasted into second crack for a big, bold and dark cup. Beans display oil. </p>
                         <p>Latin America</p>
                         <p>1lb $17.95</p>
-                        <a href="#" class="btn">Buy</a>
+                        <p><a href="#" class="btn">Buy</a></p>
                     </div>
                 </div>
             </section>
             <section class="col-1-3">
                 <div class="row">
                     <div class="col-1-3">
-                        <img src="img/roast-test.jpg" alt="" width="120">
+                        <img src="img/roast-espresso.jpg" alt="Espresso" width="120">
                     </div>
                     <div class="col-2-3">
                         <header>
@@ -155,7 +147,7 @@
                         <p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
                         <p>Latin America, Africa, Indonesia </p>
                         <p>1lb $19.95</p>
-                        <a href="#" class="btn">Buy</a>
+                        <p><a href="#" class="btn">Buy</a></p>
                     </div>
              	</div>       
             </section>  
@@ -183,7 +175,7 @@
                 </header>
                 <form class="col-3-4">
                     	<label for="newsemail">Email</label>
-                    	<input type="text" id="newsemail">
+                    	<input type="text" placeholder="Email" id="newsemail">
                     	<p><a href="#" class="btn">Sign Up Now</a></p>
                 </form>
             </div>
@@ -212,7 +204,7 @@
                 <label for="name">Name</label>
                 <input type="text" name="name" placeholder="Enter Your Name" id="name">
   				<label for="email">Email</label>
-                <input type="text" name="email" placeholder="Email" id="email">
+                <input type="email" name="email" placeholder="Email" id="email">
                 <label for="comments">Comments</label>
   				<textarea name="comments" placeholder="Comments" id="comments" cols="25" rows="3"></textarea>  <!--this is different-->
 	           	<p><a href="#" class="btn">Submit</a></p>
@@ -239,7 +231,7 @@
     	<div class="wrapper">
             <div class="row">
                 <div class="col-1-6">
-                    <a><img src="img/logo-test.png" alt="Twin Finch Roastery" width="100"></a>
+                    <a href="#"><img src="img/logo.png" alt="Twin Finch Roastery" width="100"></a>
                  </div> 
                 <div class="col-1-6">
                     <h4>Location</h4>
@@ -257,6 +249,20 @@
     	</div>
     </footer>
     
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     
+      
 </body>
 </html>
