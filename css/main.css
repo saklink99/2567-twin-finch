@@ -27,9 +27,50 @@
 	5.4 - Alignments
 --------------------------------------------------------------*/
 
+body, nav li a  {
+	color: #6c6d6d;
+}
+
+h1, #location p, .col-1-4 h2 {
+	color: #ffffff;
+
+}
+
+
+
+#location p, blockquote p, blockquote a {
+	color: #ffffff;
+	font-weight: 400;
+}
+
+ blockquote a:hover, .bg-blue a:hover {
+ 	color: #7D715F;
+ }
+
+
+.col-1-2 header p, .col-2-3 header p,.bg-blue a {
+	color: #9E8E78;
+}
+
+ h2, h3, .col-2-3 p:nth-child(4), .col-1-2 p:nth-child(5) {
+	color: #7D715F;
+	}
+
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
+
+html {
+	font-size: 16px;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#location span {
+	font-weight: 700;
+}
+
 /*--------------------------------------------------------------
 1.1 - BODY
 -------------------------------------------------------------- */
@@ -57,6 +98,27 @@ form a {
 label {
 	display:none;
 }
+
+textarea {
+	color: #9E8E78
+}
+
+::-webkit-input-placeholder {
+   color: #9E8E78;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #9E8E78;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #9E8E78;  
+}
+
+:-ms-input-placeholder {  
+   color: #9E8E78;  
+}
+
 
 /*--------------------------------------------------------------
 1.5 - LISTS
@@ -86,6 +148,11 @@ nav a, a {
 }
 
 
+nav a:hover {
+	color: #9E8E78;
+}
+
+
 /*--------------------------------------------------------------
 3.0 - SITE STRUCTURE
 -------------------------------------------------------------- */
@@ -100,7 +167,6 @@ nav a, a {
 }
 
 .wrapper {
-	background-color: #ffffff;
 	margin: 0 auto;
 	width: 70%;
 }
@@ -136,6 +202,13 @@ header .col-2-3 {
 4.0 - MEDIA
 -------------------------------------------------------------- */
 
+#hero { 
+  background: url(../img/hero.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 img {
 	max-width: 100%   							
@@ -144,6 +217,7 @@ img {
 #map {
 	height: 200px;
 }
+
 
 
 /*--------------------------------------------------------------
@@ -167,10 +241,24 @@ img {
 /*--------------------------------------------------------------
 5.1 - BG COLORS
 -------------------------------------------------------------- */
-
+	.bg-taupe {
+		background-color: #9e8e78;
+	}
+	
+	.bg-grey {
+		background-color: #6C6D6D;
+	}
+	
+	.bg-blue {
+		background-color: #E8E9E9;
+	}
 /*--------------------------------------------------------------
 5.2 - TXT UTILITY
 -------------------------------------------------------------- */
+.txt-uppercase {
+	text-transform:uppercase;
+}
+
 /*--------------------------------------------------------------
 5.3 - SPACING
 -------------------------------------------------------------- */
@@ -380,7 +468,7 @@ img {
 /*--------------------------------------------------------------
 5.1 - BG COLORS
 -------------------------------------------------------------- */	
-	
+
 /*--------------------------------------------------------------
 5.2 - TXT UTILITY
 -------------------------------------------------------------- */	
