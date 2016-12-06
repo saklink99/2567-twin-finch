@@ -34,28 +34,16 @@ body, nav li a  {
 	color: #6c6d6d;
 }
 
-h1, #location p, .col-1-4 h2, #location h2, .col-1-4 h3 {
+h1, #location p, .col-1-4 h2, #location h2, .col-1-4 h3, #location p, blockquote p, blockquote a, .btn-lg:hover, .btn-sm:hover {
 	color: #ffffff;
-
 }
 
 
-
-#location p, blockquote p, blockquote a {
-	color: #ffffff;
-	font-weight: 400;
-}
-
- blockquote a:hover, .bg-blue a:hover {
- 	color: #7D715F;
- }
-
-
-.col-1-2 header p, .col-2-3 header p,.bg-blue a {
+.col-1-2 header p, .col-2-3 header p,.bg-blue a, textarea, nav a:hover {
 	color: #9E8E78;
 }
 
- h2, h3, .col-2-3 p:nth-child(4), .col-1-2 p:nth-child(5) {
+ h2, h3, .col-2-3 p:nth-child(4), .col-1-2 p:nth-child(5), blockquote a:hover, .bg-blue a:hover  {
 	color: #7D715F;
 	}
 
@@ -70,17 +58,29 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#location span {
-	font-weight: 700;
+#location p, blockquote p, blockquote a, h2 {
+	font-weight: 400;
+}
+
+#location span, li {
+	font-weight: 600;
 }
 
 blockquote footer p, .bg-blue a{
 	text-decoration: underline;
 }
 
+h2, .bg-taupe input, .bg-taupe p, li, .col-3-4 p {
+	display: inline-block;
+}
 
-	
+textarea, form.col-1-2 input, form.col-3-4 input {
+display: block;
+}
 
+form a, footer .col-1-6:nth-child(2) {
+	text-align: left;
+}
 /*--------------------------------------------------------------
 1.1 - BODY
 -------------------------------------------------------------- */
@@ -92,26 +92,24 @@ h1, h2, h3, h4 {
 	font-family: 'raleway', sans-serif;
 }
 
-h2 + div, h3 + div {
-	border-bottom: 1px solid #7D715F;
+h2 + div, h3 + div, .col-2-3 h3 + div, .col-1-2 h3 + div  {
+	border-bottom: .5px solid #9E8E78;
 }
 
-#location h2 {
-	border-bottom: 1px solid #ffffff;
-}
-
-
+#location h2 + div {
+    border-bottom: .4px solid #ffffff;
+}	
 h1 {
-	font-size: 1.9rem;
+	font-size: 2.5rem;
+}
+
+h1, blockquote p {
 	font-weight: 300;
 }
 
 h2 {
 	font-size: 1.75rem;
-	font-weight: 400;
-	display: inline-block;
 }
-
 
 h2~p {
 	font-size: 1.2rem;
@@ -122,18 +120,13 @@ h3 {
 	font-weight: 600;
 }
 
-.col-2-3 h3 + div, .col-1-2 h3 + div  {
-	border-bottom: 1px solid #7D715F;
+#footer h2 div {
+	border-bottom: .5px solid #ffffff;
 }
-
 
 .col-1-2 h3 + div, .col-2-3 h3 + div, h2 + div {
 	width: 100px;
 	margin: 0 auto;
-}
-
-.col-2-3 header p, .col-1-2 header p {
-	text-transform: uppercase;
 }
 
 #roasts.col-2-3 span, #featured.col-1-2 span {
@@ -143,11 +136,10 @@ h3 {
 
 blockquote p {
 	font-size: 1.7rem;
-	font-weight: 300;
 }
 
 #contact span {
-	font-style: italic; 
+	font-weight: 700;  
 }
 
 /*----
@@ -184,12 +176,10 @@ blockquote p {
 
 .btn-sm:hover {
 	background-color: #9E8E78;
-	color: #ffffff;
 }
 
 .btn-lg:hover {
 	background-color: #7D715F;
-	color: #ffffff;
 }
 
 
@@ -197,60 +187,52 @@ blockquote p {
 1.4 - FORMS
 -------------------------------------------------------------- */
 
-
-form input {
-	margin-top: 20px;
+form p {
+	margin-top: 25px;
 }
 
 textarea, form.col-1-2 input, form.col-1-2 a, form.col-3-4 input {
-	display: block;
     width: 100%;
-}
-
-form a {
-	text-align: left;
 }
 
 label {
 	display:none;
 }
 
-textarea {
-	color: #9E8E78
-}
-
-input, textarea, form a {
+input, textarea, form a  {
 	border: 1px solid #6c6d6d;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 
 ::-webkit-input-placeholder {
    color: #9E8E78;
+   padding-left: 10px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #9E8E78;  
+   color: #9E8E78;
+   padding-left: 10px;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #9E8E78;  
+   color: #9E8E78; 
+   padding-left: 10px; 
 }
 
-:-ms-input-placeholder {  
-   color: #9E8E78;  
+:-ms-input-placeholder {  								/* Did I do this Right ????????*/
+   color: #9E8E78; 
+   padding-left: 10px; 
 }
 
-.bg-taupe input, .bg-taupe p {
-	display: inline-block;
+input {
+	padding: 8px;
 }
 
 /*--------------------------------------------------------------
 1.5 - LISTS
 -------------------------------------------------------------- */
 li {
-	display: inline-block;
 	list-style: none;
-    font-weight: 700;
 }
 
 nav li {
@@ -272,10 +254,6 @@ nav a, a {
 	font-size: .90rem;
 }
 
-
-nav a:hover {
-	color: #9E8E78;
-}
 
 
 /*--------------------------------------------------------------
@@ -313,9 +291,6 @@ header .col-2-3 {
 	margin-top: 40px;
 }
 
-.col-3-4 p{
-	display: inline-block;
-}
 
 .bg-taupe:first-of-type {
 	padding: 30px 0;
@@ -325,13 +300,12 @@ blockquote footer p, blockquote p {
 	margin: 0;
 }
 
- footer .col-1-6:nth-child(2) {
- 	text-align: left;
- }
-
+ 
 #contact.col-1-2 {
 	padding: 0 50px;
 }
+
+
 
 /*--------------------------------------------------------------
 3.3 - SECTIONS
@@ -346,20 +320,18 @@ blockquote footer p, blockquote p {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -ms-background-size: cover;
   background-size: cover;
-  padding: 130px 0 100px;
+  padding: 80px 0 60px;
 }
-
-img {
-	max-width: 100%   							
-}	
+	
 
 #map {
-	height: 200px;
+	height: 230px;
 }
 
-.col-1-2:first-of-type div {
-	border: 1px solid #7D715F;
+section.col-1-2:first-of-type div {
+	border: .5px solid #9E8E78;
 }
 
 
@@ -396,19 +368,66 @@ img {
 5.2 - TXT UTILITY
 -------------------------------------------------------------- */
 .txt-uppercase {
-	text-transform:uppercase;
+	text-transform: uppercase;
 }
 
 
 /*--------------------------------------------------------------
 5.3 - SPACING
 -------------------------------------------------------------- */
+
+
+header div.row, header div.col-1-6, section.bg-taupe  {
+	padding: 0;
+	margin: 0;
+}
+
+footer div.row {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#roasts div.col-1-3 {
+	padding-right: 0;
+}
+
+section.col-1-3 div.row {
+	padding-top: 0;
+}
+
+h2 {
+	margin-bottom: 5px;
+}
+.row, body > section {
+	padding: 40px 0;
+}
+
+#location .col-1-2 {
+	padding: 20px;
+}
+
+#contact .col-1-2:first-of-type {
+	padding-right: 20px;
+}
+
+#hero div.wrapper {
+	padding: 75px 20px;
+}
+
+#roasts section.col-1-3:nth-child(3) p:first-of-type{
+	margin-top: 56px;
+}
 /*--------------------------------------------------------------
 5.4 - ALIGNMENTS
 -------------------------------------------------------------- */
 
+#location .col-1-2 {
+	text-align: left;
+}
 
-
+form.col-1-2 a {
+	margin: 20px 344px 0 0;
+}
 
 /*--------------------------------------------------------------
 6.1 - SINGLE COLUMNS
@@ -462,15 +481,19 @@ img {
 	width: 25%;
 }
 
-.col-1-3, footer .col-1-6:first-of-type, footer .col-2-3 {
+.row .col-1-3 {
+	width: 30%;
+}
+
+#roasts .col-1-3, footer.col-1-6:first-of-type, footer.col-2-3 {
 	width: 33.33%;
 }
 
-.col-1-2 {
+.col-1-2, #location .col-1-3 {
 	width: 50%;	
 }
 
-.col-1-1, .col-1-3 .col-1-3, .col-1-3 .col-2-3 {
+.col-1-1, .col-1-3.col-1-3, .col-1-3.col-2-3, .row .col-1-3, #roasts div.col-1-3 {
 	width: 100%;
 }
 
@@ -482,6 +505,7 @@ img {
  .col-2-7, footer .col-1-6:nth-child(2)  {
 	width: 28.57%;
 }
+
 
  .col-4-11, footer.col-2-3 {
 	width: 36.36%;
@@ -502,7 +526,11 @@ img {
  .col-4-9 {
 	width: 44.44%;
 } 
- 
+
+ .col-3-4 {
+	width:50%;
+} 
+
  .col-5-9 {
 	width: 55.55%;
 } 
@@ -532,10 +560,6 @@ img {
 	width: 71.43% ;
 }
 
- .col-3-4 {
-	width:50%;
-}
-
   .col-8-12 {
  	width: 80%;
  }
@@ -547,6 +571,7 @@ img {
   .col-9-10 {
 	width: 90%;
 } 
+
 
 
 
@@ -566,11 +591,6 @@ img {
 1.2 - HEADINGS
 -------------------------------------------------------------- */
  
-
-	.col-1-2 h3 + div, h2 + div {
-   		width: 50px;
-		margin: 0 auto;
-	}
 /*--------------------------------------------------------------
 1.4 - FORMS
 -------------------------------------------------------------- */	
@@ -597,6 +617,18 @@ img {
 	
 	nav .col-2-3 {
 		margin-top: 0;
+	}
+	
+	#hero div.wrapper {
+	padding: 80px 20px 60px;
+	}
+	
+	#hero { 
+  	padding: 21px 0 26px;
+	}
+	
+	#roasts .col-2-3 div {
+		margin-right: 117px;
 	}
 /*--------------------------------------------------------------
 3.3 - SECTIONS
@@ -630,12 +662,18 @@ img {
 5.4 - ALIGNMENTS
 -------------------------------------------------------------- */
 
+#roasts .col-2-3 {
+	text-align: left;
+}
 	
-	
+footer .col-1-6:nth-child(2)	 {
+    text-align: center;
+}
+
 /* ========================= COLUMNS ============================== */
 
 
-	.col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8), col-1-6-sm, .col-8-12, .col-1-6 {
+	.col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8), col-1-6-sm, .col-8-12, .col-1-6, .col-1-2, .col-1-3 {
 		padding-right: 0;    
 	}
 	
@@ -659,9 +697,10 @@ img {
 		width: 28.57%;
 	}
 	
-	.col-1-9, .col-1-3 .col-1-3 {
-		width: 33.33%;
-	}
+	
+	.col-1-9,  .col-1-3, #roasts .col-1-3 .col-1-3 {
+	width: 33.33%;
+}
 	
 	 .col-4-11 {
 		width: 36.36%;
@@ -683,7 +722,7 @@ img {
 		width: 44.44%;
 	} 
 	
-	.col-1-6.col-sm, .col-5-6 {
+	.col-1-6.col-sm, .col-5-6  {
 	width: 50%;
 	}
 	
@@ -707,7 +746,7 @@ img {
 		width: 63.63%;
 	} 	
 	
-	.col-5-6, .col-2-3, .col-1-3 .col-2-3 {
+	.col-5-6, .col-2-3, .col-1-3 .col-2-3, #roasts .col-1-3 .col-2-3 {
 		width: 66.66%;
 	}
 	
@@ -723,9 +762,10 @@ img {
 		width: 90%;
 	}
 	
-	.col-1-7, .col-1-11, .col-1-3, .col-8-12, .col-1-4, .col-2-3, .col-1-2, .col-1-6, .col-3-4 {
+	.col-1-7, .col-1-11, .col-1-3, .col-8-12, .col-1-4, .col-1-2, .col-1-6, .col-3-4,  nav .col-2-3, footer .col-2-3, #roasts .col-1-3, footer .col-1-6:nth-child(2) {
 		width: 100%;
 	}
+	
 	
 }
 
