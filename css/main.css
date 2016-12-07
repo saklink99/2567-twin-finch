@@ -28,7 +28,7 @@
 --------------------------------------------------------------*/
 
 /* when I code the spacing  - apply it to the row or div container */
-
+/*should I combine elements from the btn class and btn hover (colors, borders, text-transform, font-weight, border, text-align center, text-decoration none etc.), combine margin 0 auto?,  */
 
 body, nav li a  {
 	color: #6c6d6d;
@@ -78,9 +78,7 @@ textarea, form.col-1-2 input{
 display: block;
 }
 
-form a, footer .col-1-6:nth-child(2) {
-	text-align: left;
-}
+
 /*--------------------------------------------------------------
 1.1 - BODY
 -------------------------------------------------------------- */
@@ -121,8 +119,11 @@ h3 {
 }
 
 section.col-1-3 .col-2-3 p:nth-child(3){
-	font-weight: 200;
     font-size: .95rem;
+}
+
+section.col-1-3 .col-2-3 p:nth-child(3), #roasts.col-2-3 span, #featured.col-1-2 span {
+	font-weight: 200;
 }
 
 #footer h2 div {
@@ -135,7 +136,6 @@ section.col-1-3 .col-2-3 p:nth-child(3){
 }
 
 #roasts.col-2-3 span, #featured.col-1-2 span {
-	font-weight: 200;
 	font-size: .75rem;
 }
 
@@ -462,7 +462,7 @@ h2 {
 5.4 - ALIGNMENTS
 -------------------------------------------------------------- */
 
-#location .col-1-2 {
+form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 	text-align: left;
 }
 
