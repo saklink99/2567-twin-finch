@@ -30,23 +30,33 @@
 /* when I code the spacing  - apply it to the row or div container */
 /*should I combine elements from the btn class and btn hover (colors, borders, text-transform, font-weight, border, text-align center, text-decoration none etc.), combine margin 0 auto?,  */
 
-body, nav li a  {
+body, nav li a {
 	color: #6c6d6d;
 }
 
 h1, #location p, .col-1-4 h2, #location h2, .col-1-4 h3, #location p, blockquote p, blockquote a, .btn-lg:hover, .btn-sm:hover {
-	color: #ffffff;
+	color: #fff;
 }
-
 
 .col-1-2 header p, .col-2-3 header p,.bg-blue a, textarea, nav a:hover {
 	color: #9E8E78;
 }
 
- h2, h3, .col-2-3 p:nth-child(4), .col-1-2 p:nth-child(5), blockquote a:hover, .bg-blue a:hover  {
+h2, h3, .col-2-3 p:nth-child(4), .col-1-2 p:nth-child(5), blockquote a:hover, .bg-blue a:hover, .btn-sm, .btn-lg {
 	color: #7D715F;
-	}
+}
 
+.btn-sm, .btn-lg, nav a, a {
+	text-decoration: none;
+}
+
+form a, #location .col-1-2, .col-2-7 {
+	text-align: left;
+}
+
+body, footer, body, .btn-sm, .btn-lg {
+    text-align: center;
+}
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
@@ -58,15 +68,23 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#location p, blockquote p, blockquote a, h2 {
+img + p {
+	font-weight: 200;
+}
+
+h1, blockquote p, blockquote a {
+	font-weight: 300;
+}
+
+#location p, h2 {
 	font-weight: 400;
 }
 
-#location span, li {
+#location span, li, .btn-sm, .btn-lg, h3 {
 	font-weight: 600;
 }
 
-blockquote footer p, .bg-blue a{
+blockquote footer p, .bg-blue a {
 	text-decoration: underline;
 }
 
@@ -75,13 +93,38 @@ h2, .bg-taupe input, .bg-taupe p, li, .col-3-4 p, form.col-3-4 input, #contact a
 }
 
 textarea, form.col-1-2 input{
-display: block;
+	display: block;
 }
-
 
 /*--------------------------------------------------------------
 1.1 - BODY
 -------------------------------------------------------------- */
+
+blockquote footer p, blockquote p {
+	margin: 0;
+}
+
+blockquote > p {
+	margin-top: 30px;
+}
+
+#roasts .col-2-3 span, #featured .col-1-2 span {
+	font-size: .75rem;
+}
+
+blockquote p{
+	font-size: 1.7rem;
+}
+
+blockquote a {
+	font-size: 1.5rem;
+}
+
+#contact span {
+	font-weight: 700;  
+}
+
+ 
 /*--------------------------------------------------------------
 1.2 - HEADINGS
 -------------------------------------------------------------- */
@@ -95,30 +138,28 @@ h2 + div, h3 + div, .col-2-3 h3 + div, .col-1-2 h3 + div  {
 }
 
 #location h2 + div {
-    border-bottom: .4px solid #ffffff;
-}	
+    border-bottom: .4px solid #fff;
+}
+
 h1 {
 	font-size: 2.5rem;
 }
 
-h1, blockquote p {
-	font-weight: 300;
-}
-
 h2 {
 	font-size: 1.75rem;
+	margin-bottom: 5px;
+	margin-top: 50px;
 }
 
-h2~p {
+h2~p, #box p {
 	font-size: 1.2rem;
 }
 
 h3 {
 	font-size: 1.5rem; 
-	font-weight: 600;
 }
 
-section.col-1-3 .col-2-3 p:nth-child(3){
+section.col-1-3 .col-2-3 p:nth-child(3) {
     font-size: .95rem;
 }
 
@@ -127,7 +168,7 @@ section.col-1-3 .col-2-3 p:nth-child(3), #roasts.col-2-3 span, #featured.col-1-2
 }
 
 #footer h2 div {
-	border-bottom: .5px solid #ffffff;
+	border-bottom: .5px solid #fff;
 }
 
 .col-1-2 h3 + div, .col-2-3 h3 + div, h2 + div {
@@ -135,17 +176,11 @@ section.col-1-3 .col-2-3 p:nth-child(3), #roasts.col-2-3 span, #featured.col-1-2
 	margin: 0 auto;
 }
 
-#roasts.col-2-3 span, #featured.col-1-2 span {
-	font-size: .75rem;
+.bg-taupe h3 {
+	padding-top: 20px;
 }
 
-blockquote p {
-	font-size: 1.7rem;
-}
 
-#contact span {
-	font-weight: 700;  
-}
 
 /*----
 ----------------------------------------------------------
@@ -154,29 +189,21 @@ blockquote p {
 
 .btn-sm {
 	padding: 10px 50px;
-	text-transform: uppercase;
-	font-weight: 600;
 	-moz-border-radius: 10px;
 	-o-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	border: 1px solid #7D715F;
-	text-decoration: none;
-	text-align: center;
-	color: #7D715F;
 }
 
 .btn-lg {
 	padding: 5px 40px;
-	text-transform: uppercase;
 	display: inline-block;
-	font-weight: 600;
+	background-color: #fff;
+}
+
+.btn-sm, .btn-lg {
 	border: 1px solid #7D715F;
-	text-decoration: none;
-	text-align: center;
-	background-color: #ffffff;
-	color: #7D715F;
 }
 
 .btn-sm:hover {
@@ -186,7 +213,6 @@ blockquote p {
 .btn-lg:hover {
 	background-color: #7D715F;
 }
-
 
 #sprite {
     margin-left: 0;
@@ -214,7 +240,6 @@ blockquote p {
 }
 
 
-
 /*--------------------------------------------------------------
 1.4 - FORMS
 -------------------------------------------------------------- */
@@ -232,7 +257,7 @@ form.col-3-4 input {
 }
 
 label {
-	display:none;
+	display: none;
 }
 
 input, textarea, form a  {
@@ -240,29 +265,36 @@ input, textarea, form a  {
 	margin-top: 20px;
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
    color: #9E8E78;
    padding-left: 10px;
 }
-
-:-moz-placeholder { /* Firefox 18- */
+::-moz-placeholder { /* Firefox 19+ */
    color: #9E8E78;
-   padding-left: 10px;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #9E8E78; 
    padding-left: 10px; 
 }
-
-:-ms-input-placeholder {  								/* Did I do this Right ????????*/
-   color: #9E8E78; 
-   padding-left: 10px; 
+:-ms-input-placeholder { /* IE 10+ */
+  color: #9E8E78; 
+   padding-left: 10px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #9E8E78; 
+  padding-left: 10px; 
 }
 
 input {
 	padding: 8px;
 }
+
+#contact form.col-1-2 a {
+	margin: 20px 20px 0 0;
+	width: 200px;
+}
+
+#contact form.col-1-2 p {
+	padding-right: 250px;
+}
+
 
 /*--------------------------------------------------------------
 1.5 - LISTS
@@ -283,9 +315,8 @@ ul {
 /*--------------------------------------------------------------
 2.0 - MAIN MENU
 -------------------------------------------------------------- */
-nav a, a {
-	text-decoration: none;
-	padding-top:10px;
+a {
+	padding-top: 10px;
 	color: #000000;
 	font-size: .90rem;
 }
@@ -310,42 +341,34 @@ nav a, a {
 	width: 70%;
 }
 
-
 .row:after {
 	clear:both;
 	content:"";
 	display:table;
 }
 
-
-body {
-	text-align: center;
-}
-
-
 header .col-2-3 {
 	margin-top: 40px;
 }
-
 
 .bg-taupe:first-of-type {
 	padding: 30px 0;
 }
 
-blockquote footer p, blockquote p {
-	margin: 0;
-}
-
-blockquote > p {
-	margin-top: 30px;
-}
- 
 #contact.col-1-2 {
 	padding: 0 50px;
 }
 
-.bg-taupe h3 {
-padding-top: 20px;
+section.col-1-2:first-of-type > div {
+	border: .5px solid #9E8E78;
+}
+
+section.col-1-2:nth-child(2) h3{
+	margin-top: 79px;
+}
+
+.bg-taupe .row {
+	padding: 0;
 }
 
 /*--------------------------------------------------------------
@@ -371,10 +394,9 @@ padding-top: 20px;
 	height: 230px;
 }
 
-section.col-1-2:first-of-type > div {
-	border: .5px solid #9E8E78;
+header img {
+	margin-top: 20px;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -394,17 +416,18 @@ section.col-1-2:first-of-type > div {
 /*--------------------------------------------------------------
 5.1 - BG COLORS
 -------------------------------------------------------------- */
-	.bg-taupe {
-		background-color: #9e8e78;
-	}
-	
-	.bg-brown {
-		background-color: #7D715F;
-	}
-	
-	.bg-blue {
-		background-color: #E8E9E9;
-	}
+.bg-taupe {
+	background-color: #9e8e78;
+}
+
+.bg-brown {
+	background-color: #7D715F;
+}
+
+.bg-blue {
+	background-color: #E8E9E9;
+}
+
 /*--------------------------------------------------------------
 5.2 - TXT UTILITY
 -------------------------------------------------------------- */
@@ -412,11 +435,9 @@ section.col-1-2:first-of-type > div {
 	text-transform: uppercase;
 }
 
-
 /*--------------------------------------------------------------
 5.3 - SPACING
 -------------------------------------------------------------- */
-
 
 header div.row, header div.col-1-6, section.bg-taupe  {
 	padding: 0;
@@ -436,11 +457,16 @@ section.col-1-3 div.row {
 	padding-top: 0;
 }
 
-h2 {
-	margin-bottom: 5px;
-}
 .row, body > section {
 	padding: 40px 0;
+}
+
+.bg-blue .col-8-12.center-block p {
+	margin-bottom: 30px;
+}
+
+.bg-blue h2.txt-uppercase {
+	margin-top: 30px;
 }
 
 #location .col-1-2 {
@@ -455,25 +481,25 @@ h2 {
 	padding: 75px 20px;
 }
 
-#roasts section.col-1-3:nth-child(3) p:first-of-type{
-	margin-top: 56px;
+#roasts section.col-1-3:nth-child(3) p:first-of-type {
+	margin-top: 51px;
 }
+
+.col-1-2 div:first-child {
+	padding: 25px 0;
+}
+
+.m-t-md {
+	margin-top: 37px;
+}
+
+
 /*--------------------------------------------------------------
 5.4 - ALIGNMENTS
 -------------------------------------------------------------- */
 
-form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
-	text-align: left;
-}
 
-#contact form.col-1-2 a {
-	margin: 20px 20px 0 0;
-	width: 200px;
-}
 
-#contact form.col-1-2 p {
-	padding-right: 250px;
-}
 /*--------------------------------------------------------------
 6.1 - SINGLE COLUMNS
 -------------------------------------------------------------- */
@@ -488,6 +514,7 @@ form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 [class*='col-']:last-of-type { 
 	padding-right: 0;
 }
+
 
 .col-1-12 {
 	width:8.33%;
@@ -517,7 +544,6 @@ form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 	width: 16.66%;
 }
 
-
 .col-1-5 {
 	width: 20%;
 }
@@ -526,19 +552,15 @@ form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 	width: 25%;
 }
 
-.row .col-1-3 {
-	width: 30%;
+.col-1-3 {
+	width: 33%;
 }
 
-#roasts .col-1-3, footer.col-1-6:first-of-type, footer.col-2-3 {
-	width: 33.33%;
-}
-
-.col-1-2, #location .col-1-3 {
+.col-1-2 {
 	width: 50%;	
 }
 
-.col-1-1, .col-1-3.col-1-3, .col-1-3.col-2-3, .row .col-1-3, #roasts div.col-1-3 {
+.col-1-1, .col-1-3 .col-1-3 { /* also .col-2-3 */
 	width: 100%;
 }
 
@@ -547,73 +569,67 @@ form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 -------------------------------------------------------------- */
 
   
- .col-2-7, footer .col-1-6:nth-child(2)  {
+.col-2-7  {
 	width: 28.57%;
 }
 
-
- .col-4-11, footer.col-2-3 {
+.col-4-11 {
 	width: 36.36%;
 } 	 
 
- .col-3-8 {
+.col-3-8 {
 	width: 37.5%;
 } 
  
- .col-2-5 {
+.col-2-5 {
 	width: 40% ;
 }
 
- .col-5-12 {
+.col-5-12 {
 	width: 41.66%;
 } 	
 
- .col-4-9 {
+.col-4-9 {
 	width: 44.44%;
 } 
 
- .col-3-4 {
+.col-3-4 {
 	width:75%;
 } 
 
- .col-5-9 {
+.col-5-9 {
 	width: 55.55%;
 } 
- 
- 
- .col-7-12 {
+
+.col-7-12 {
 	width: 58.33%;
 } 
 	
- .col-3-5 {
+.col-3-5 {
 	width: 60%;
 }
 	
- .col-5-8 {
+.col-5-8 {
 	width: 62.5%;
 }  
 
- .col-7-11 {
+.col-7-11 {
 	width: 63.63%;
-} 	
-
- header nav.col-2-3 { 
-	width: 66.66%;
 }
 
- .col-5-7 {
+.col-5-7 {
 	width: 71.43% ;
 }
 
-  .col-8-12 {
+.col-8-12 {
  	width: 80%;
- }
+}
  
-  .col-5-6 {
+.col-5-6 {
 	width: 83.33%;
 }
 
-  .col-9-10 {
+.col-9-10 {
 	width: 90%;
 } 
 
@@ -627,15 +643,21 @@ form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 	
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
--------------------------------------------------------------- */		
+-------------------------------------------------------------- */
+	
 /*--------------------------------------------------------------
 1.1 - BODY
 -------------------------------------------------------------- */
-
+.col-3-4 p {
+		display: block;
+	}
+		
 /*--------------------------------------------------------------
 1.2 - HEADINGS
 -------------------------------------------------------------- */
- 
+ h1 {
+		font-size: 2.1rem;
+	}
 /*--------------------------------------------------------------
 1.4 - FORMS
 -------------------------------------------------------------- */	
@@ -654,27 +676,34 @@ form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 		width: 85%;
 	}
 	
-	
-	.col-3-4 p {
-		display: block;
-	}
-	
-	
 	nav .col-2-3 {
 		margin-top: 0;
 	}
 	
 	#hero div.wrapper {
-	padding: 80px 20px 60px;
+		padding: 80px 20px 60px;
 	}
 	
 	#hero { 
-  	padding: 21px 0 26px;
+  		padding: 21px 0 26px;
 	}
 	
 	#roasts .col-2-3 div {
 		margin-right: 117px;
 	}
+	
+	section.col-1-2:nth-child(2) h3, #roasts section.col-1-3:nth-child(3) p:first-of-type {
+    	margin-top: 10px;
+	}
+	
+	section.col-1-2 img  {
+   		margin-top: 30px;
+	}
+
+	#featured div.row, #roasts div.row{
+		padding-bottom: 0;
+	}
+
 /*--------------------------------------------------------------
 3.3 - SECTIONS
 -------------------------------------------------------------- */
@@ -683,7 +712,10 @@ form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
-
+	#roasts img {
+	    width: 80px;
+    	margin-top: 30px;
+	}
 
 /*--------------------------------------------------------------
 5.0 - UTILITY
@@ -697,124 +729,48 @@ form a, footer .col-1-6:nth-child(2), #location .col-1-2 {
 5.2 - TXT UTILITY
 -------------------------------------------------------------- */	
 
-
 /*--------------------------------------------------------------
 5.3 - SPACING
 -------------------------------------------------------------- */	
+
+	.m-t-md {
+		margin-top: 10px;
+	}
 
 
 /*--------------------------------------------------------------
 5.4 - ALIGNMENTS
 -------------------------------------------------------------- */
 
-#roasts .col-2-3 {
-	text-align: left;
-}
-	
-footer .col-1-6:nth-child(2)	 {
-    text-align: center;
-}
+	#roasts .col-2-3 {
+		text-align: left;
+	}
 
+	.col-2-7 {
+		text-align: center;
+	}
+	
 
 /* ========================= COLUMNS ============================== */
 
 
-	.col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8), col-1-6-sm, .col-8-12, .col-1-6, .col-1-2, .col-1-3 {
+	.col-8-12, .col-1-6, .col-1-2, .col-1-3 {
 		padding-right: 0;    
 	}
 	
 /*--------------------------------------------------------------
 6.1 - SINGLE & FRACTION COLUMNS
 -------------------------------------------------------------- */
-
-	.col-1-6   {
-		width: 16.66%;
+	
+	.col-1-3 .col-1-3 {
+		width: 33.33%;
 	}
 	
-	.col-1-5, .col-1-10  {
-		width: 20%;
-	}
-	
-	.col-1-4.col-sm, .col-1-8, .col-1-12  {
-		width: 25%;
-	}
-	 
-	 .col-2-7 {
-		width: 28.57%;
-	}
-	
-	
-	.col-1-9,  .col-1-3, #roasts .col-1-3 .col-1-3 {
-	width: 33.33%;
-}
-	
-	 .col-4-11 {
-		width: 36.36%;
-	} 	
-	
-	.col-3-8 {
-		width: 37.5%;
-	} 
-	
-	.col-2-5, .col-1-10.col-sm {
-		width: 40% ;
-	}
-	
-	.col-5-12 {
-		width: 41.66%;
-	} 	
-	
-	 .col-4-9 {
-		width: 44.44%;
-	} 
-	
-	.col-1-6.col-sm, .col-5-6  {
-	width: 50%;
-	}
-	
-	.col-5-9 {
-		width: 55.55%;
-	} 
-	  
-	.col-7-12 {
-		width: 58.33%;
-	} 
-	
-	.col-3-5, .col-9-10, .col-2-3 {
-		width: 60%;
-	}
-		
-	.col-5-8 {
-		width: 62.5%;
-	}  
-	  	
-  	.col-7-11 {
-		width: 63.63%;
-	} 	
-	
-	.col-5-6, .col-2-3, .col-1-3 .col-2-3, #roasts .col-1-3 .col-2-3 {
+	.col-1-3 .col-2-3 { 
 		width: 66.66%;
 	}
 	
-	.col-5-7 {
-		width: 71.43% ;
-	}
-	
-	.col-9-10 {
-		width: 80%;
-	}
-	
-	.col-1-6.col-sm {
-		width: 90%;
-	}
-	
-	.col-1-7, .col-1-11, .col-1-3, .col-8-12, .col-1-4, .col-1-2, .col-1-6, .col-3-4,  nav .col-2-3, footer .col-2-3, #roasts .col-1-3, footer .col-1-6:nth-child(2) {
+	.col-1-2, .col-1-3, .col-1-4, .col-1-6, .col-8-12, .col-2-7, .col-3-4 {
 		width: 100%;
-	}
-	
-	
+	}	
 }
-
-	
-	
-	
