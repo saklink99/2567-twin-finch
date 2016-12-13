@@ -34,11 +34,11 @@ body, nav li a {
 	color: #6c6d6d;
 }
 
-h1, #location p, .col-1-4 h2, #location h2, #location p, blockquote p, blockquote a, .btn-lg:hover, .btn-sm:hover {
+h1, #location p, .col-1-4 h2, #location h2, #location p, blockquote p, blockquote a, .btn-lg:hover, .btn-sm:hover, nav a:hover  {
 	color: #fff;
 }
 
-.col-1-2 header p, .col-2-3 header p,.bg-blue a, textarea, nav a:hover {
+.col-1-2 header p, .col-2-3 header p, .bg-blue a, textarea {
 	color: #9E8E78;
 }
 
@@ -220,6 +220,11 @@ a {
 	font-size: .90rem;							/*put the as with buttons or if you have nav li and nav a lines, you can put thise under main menu*/
 }
 
+nav li a:hover {
+	background-color: #9E8E78;
+	padding: 5px 0;
+}
+
 #sprite {
     margin-left: 0;
 }
@@ -263,7 +268,8 @@ textarea, form.col-1-2 input, form.col-1-2 a {
 }
 
 form.col-3-4 input {
-	width: 75%;
+	width: 70%;
+	margin-right: 10px;
 }
 
 label {
