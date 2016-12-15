@@ -10,25 +10,21 @@
 	1.3 - Buttons
 	1.4 - Forms
 	1.5 - Lists
-	1.6 - Tables
-2.0 - Navigation Menus
-	3.1 - Main Menuf
-	3.2 - Sub Menu
-	3.3 - Footer Menu
 3.0 - Content
 	3.1 - Site Structure
-	3.2 - Section Name
-	3.3 - Section Name
 4.0 - Media
 5.0 - Utility
 	5.1 - Background Colors
 	5.2 - Text Colors
 	5.3 - Text Sizes
-	5.4 - Alignments
 --------------------------------------------------------------*/
 
 /* when I code the spacing  - apply it to the row or div container */
 /*should I combine elements from the btn class and btn hover (colors, borders, text-transform, font-weight, border, text-align center, text-decoration none etc.), combine margin 0 auto?,  */
+
+
+
+/*note to do peer review commit*/
 
 body, nav li a {
 	color: #6c6d6d;
@@ -38,11 +34,11 @@ h1, #location p, .col-1-4 h2, #location h2, #location p, blockquote p, blockquot
 	color: #fff;
 }
 
-.col-1-2 header p, .col-2-3 header p, .bg-blue a, textarea {
+.col-1-2 header p, .col-2-3 header p, .bg-blue a, textarea, .bg-blue a:hover {
 	color: #9E8E78;
 }
 
-h2, h3, .col-2-3 p:nth-child(4), .col-1-2 p:nth-child(5), blockquote a:hover, .bg-blue a:hover, .btn-sm, .btn-lg {
+h2, h3, .col-2-3 p:nth-child(4), .col-1-2 p:nth-child(5), blockquote a:hover, .btn-sm, .btn-lg {
 	color: #7D715F;
 }
 
@@ -68,6 +64,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+h1, blockquote p, blockquote a {							/*This is a grab bag for typography, so it goes here*/
+	font-weight: 300;
+}
+
 #location p, h2 {
 	font-weight: 400;
 }
@@ -78,16 +78,15 @@ body {
 
 blockquote footer a, .bg-blue a {
 	text-decoration: underline;
+	padding: 5px;
 }
 
-h2, .bg-taupe input, .bg-taupe p, li, .col-3-4 p, form.col-3-4 input, #contact a, blockquote a:hover, .bg-blue a:hover {
+h2, .bg-taupe input, .bg-taupe p, li, .col-3-4 p, form.col-3-4 input, #contact a {
 	display: inline-block;
 }
 
 
-h1, blockquote p, blockquote a {							/*This is a grab bag for typography, so it goes here*/
-	font-weight: 300;
-}
+
 /*--------------------------------------------------------------
 1.1 - BODY
 -------------------------------------------------------------- */
@@ -166,13 +165,18 @@ h2 {
 	font-size: 1.75rem;
 	margin-bottom: 5px;
 	margin-top: 50px;
+    letter-spacing: 2px;
+}
+
+.col-1-4 h2 {
+font-size: 1.4rem;
 }
 
 .bg-blue h2.txt-uppercase {									
 	margin-top: 30px;
 }
 
-h3, .col-1-4 h2 {
+h3 {
 	font-size: 1.5rem; 
 }
 
@@ -184,8 +188,7 @@ section.col-1-2:nth-child(2) h3{
 	margin-top: 79px;
 }
 
-/*----
-----------------------------------------------------------
+/*--------------------------------------------------------------
 1.3 - BUTTONS
 -------------------------------------------------------------- */
 
@@ -208,7 +211,7 @@ section.col-1-2:nth-child(2) h3{
 	border: 1px solid #7D715F;
 }
 
-.btn-sm:hover {
+.btn-sm:hover, nav li a:hover  {
 	background-color: #9E8E78;
 }
 
@@ -218,11 +221,6 @@ section.col-1-2:nth-child(2) h3{
 
 a {
 	font-size: .90rem;							/*put the as with buttons or if you have nav li and nav a lines, you can put thise under main menu*/
-}
-
-nav li a:hover {
-	background-color: #9E8E78;
-	padding: 5px 0;
 }
 
 #sprite {
@@ -290,7 +288,7 @@ input, textarea, form a  {
    padding-left: 10px; 
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #9E8E78; 
+   color: #9E8E78; 
    padding-left: 10px;
 }
 :-moz-placeholder { /* Firefox 18- */
@@ -319,18 +317,13 @@ li {
 	list-style: none;
 }
 
-nav li {
-	padding: 0 5px;
+nav li a {
+	padding: 5px;
 }
 
 ul {
 	padding-left: 0;
 }
-
-
-/*--------------------------------------------------------------
-2.0 - MAIN MENU
--------------------------------------------------------------- */
 
 
 /*--------------------------------------------------------------
@@ -361,7 +354,7 @@ header .col-2-3 {
 }
 
 .bg-taupe:first-of-type {
-	padding: 30px 0;
+	padding: 20px 0 60px;
 }
 
 #contact.col-1-2 {
@@ -372,12 +365,11 @@ section.col-1-2:first-of-type > div {
 	border: .5px solid #9E8E78;
 }
 
-.bg-taupe .row {
+.bg-taupe .row, .bg-blue .row.col-8-12.center-block, header div.row, header div.col-1-6, section.bg-taupe   {
 	padding: 0;
 }
 
 header div.row, header div.col-1-6, section.bg-taupe  {
-	padding: 0;
 	margin: 0;
 }
 
@@ -390,9 +382,8 @@ header div.row, header div.col-1-6, section.bg-taupe  {
 	margin: 0 auto;
 }
 
-footer div.row, header.col-1-4, h4 { 			/*This is structure, because what it's doing is structure and it targets more divs than text elements*/
+footer div.row, header.col-1-4, h4, header.row.col-8-12.center-block { 			/*This is structure, because what it's doing is structure and it targets more divs than text elements*/
 	padding-bottom: 0;
-	margin-bottom: 0;
 }
 
 #roasts div.col-1-3, nav li:nth-child(4) {				 /*This is structure because of what its doing*/
@@ -401,6 +392,10 @@ footer div.row, header.col-1-4, h4 { 			/*This is structure, because what it's d
 
 section.col-1-3 div.row {
 	padding-top: 0;
+}
+
+footer div.row, header.col-1-4, h4, section.col-1-3 div.row {
+	padding-bottom: 0;
 }
 
 .row, body > section {
@@ -423,18 +418,21 @@ section.col-1-3 div.row {
 	padding: 25px 0;
 }
 
+div.bg-taupe {
+	padding-bottom: 70px;
+}
 
+section.bg-taupe {
+	padding-bottom: 30px;
+}
 
-/*--------------------------------------------------------------
-3.3 - SECTIONS
--------------------------------------------------------------- */
 
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
 
 #hero { 
-  background: url(../img/hero.jpg) no-repeat center center fixed; 
+  background: url(../img/bg-hero.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -501,17 +499,9 @@ header img {
 	margin-top: 37px;
 }
 
-
 /*--------------------------------------------------------------
-5.4 - ALIGNMENTS
+6.0 - COLUMNS
 -------------------------------------------------------------- */
-
-
-
-/*--------------------------------------------------------------
-6.1 - SINGLE COLUMNS
--------------------------------------------------------------- */
-/* ========================== COLUMNS ============================ */
 
 [class*='col-'] {     							
 	float: left;
@@ -522,6 +512,16 @@ header img {
 [class*='col-']:last-of-type { 
 	padding-right: 0;
 }
+
+@media screen and (min-width: 480px) {
+	[class*='col-'] {     							 						
+	margin-bottom: 0;
+}
+}
+
+/*--------------------------------------------------------------
+6.1 - SINGLE COLUMNS
+-------------------------------------------------------------- */
 
 
 .col-1-12 {
@@ -669,15 +669,6 @@ header img {
  h1 {
 		font-size: 2.1rem;
 	}
-/*--------------------------------------------------------------
-1.4 - FORMS
--------------------------------------------------------------- */	
-/*--------------------------------------------------------------
-1.5 - LISTS
--------------------------------------------------------------- */
-/*--------------------------------------------------------------
-2.0 - MAIN MENU
--------------------------------------------------------------- */
 
 /*--------------------------------------------------------------
 3.0 - SITE STRUCTURE
@@ -711,10 +702,6 @@ header img {
 		padding-bottom: 0;
 	}
 
-/*--------------------------------------------------------------
-3.3 - SECTIONS
--------------------------------------------------------------- */
-/*-- Services -- */
 
 /*--------------------------------------------------------------
 4.0 - MEDIA
@@ -724,17 +711,6 @@ header img {
     	margin-top: 30px;
 	}
 
-/*--------------------------------------------------------------
-5.0 - UTILITY
--------------------------------------------------------------- */
-
-/*--------------------------------------------------------------
-5.1 - BG COLORS
--------------------------------------------------------------- */	
-
-/*--------------------------------------------------------------
-5.2 - TXT UTILITY
--------------------------------------------------------------- */	
 
 /*--------------------------------------------------------------
 5.3 - SPACING
